@@ -1,0 +1,32 @@
+#disable firewall
+sudo /sbin/iptables -F
+
+#install ssh
+sudp apt install ssh
+
+#update
+sudo apt update
+sudo apt upgrade
+
+#install metasploit
+https://metasploit.help.rapid7.com/docs/installing-the-metasploit-framework
+sudo apt install curl
+
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+
+#install apache
+https://tutorials.ubuntu.com/tutorial/install-and-configure-apache#1
+sudo apt update
+sudo apt install apache2
+
+#Security Onion
+https://securityonion.net/
+
+#PFSense
+https://www.pfsense.org/
+
+#OWASP
+https://www.owasp.org/index.php/Main_Page
+
+#Kali Linux
+https://www.kali.org/
