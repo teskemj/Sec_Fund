@@ -1,2 +1,2 @@
 ## Sec_Fund
-****** Documentation for Security Fundamentals Course
+** Documentation for Security Fundamentals Course
