@@ -2,20 +2,20 @@
 Get-CimClass -ClassName CIM*
 
 
-Get-CimClass -ClassName *disk* -ComputerName localhost
+Get-CimClass -ClassName *disk* 
 
-Get-WmiObject -class Win32_logicaldisk -ComputerName localhost
+Get-WmiObject -class Win32_logicaldisk 
 
-Get-CimInstance -ClassName CIM_LogicalDisk -ComputerName localhost |fl
+Get-CimInstance -ClassName CIM_LogicalDisk |fl
 
 #Viewing freespace
-((Get-CimInstance -ClassName Win32_logicaldisk -ComputerName localhost |
-     where DeviceID -EQ 'C:').FreeSpace)/1GB
+((Get-CimInstance -ClassName Win32_logicaldisk |
+            where DeviceID -EQ 'C:').FreeSpace) / 1GB
 
 #Last Reboot
-(Get-CIMInstance -ClassName Win32_OperatingSystem –ComputerName localhost).LastBootUpTime
+(Get-CIMInstance -ClassName Win32_OperatingSystem).LastBootUpTime
 
 #endregion
 
 #System Name
-(Get-CIMInstance -ClassName Win32_OperatingSystem –ComputerName localhost).LastBootUpTime
+(Get-CIMInstance -ClassName Win32_OperatingSystem).LastBootUpTime
